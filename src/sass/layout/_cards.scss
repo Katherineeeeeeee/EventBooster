@@ -1,0 +1,173 @@
+a {
+  display: block;
+}
+.flex{
+  position: relative;
+}
+.gallery {
+  position: relative;
+  // top:-50px;
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+  margin: -10px;
+
+  @include mq(tablet) {
+    margin: -16px;
+    // top: -80px;
+  }
+
+  @include mq(desktop) {
+    // top: -67px;
+  }
+
+}
+
+.gallery__item {
+  position: relative;
+  z-index: 1;
+  width: 130px;
+  margin: 10px;
+
+  @include mq(tablet) {
+    flex-basis: calc((100% - 32px * 4) / 4);
+    margin: 16px;
+  }
+
+  @include mq(desktop) {
+    flex-basis: calc((100% - 32px * 4) / 4);
+  }
+}
+
+.gallery__item::after {
+  content: '';
+  position: absolute;
+  top: -10px;
+  right: -3px;
+  z-index: 0;
+
+  display: block;
+  width: 100px;
+  height: 100px;
+
+  border: 1px solid rgba(220, 86, 197, 0.3);
+
+  border-radius: 50px 0px;
+
+  @include mq(tablet) {
+    width: 120px;
+    height: 112px;
+    right: 0;
+  }
+
+  @include mq(desktop) {
+    width: 227px;
+    height: 212px;
+
+    top: -14px;
+  }
+}
+
+.gallery__img {
+  position: relative;
+  z-index: 1;
+  margin-bottom: 8px;
+  display: block;
+  width: 120px;
+  height: 151px;
+  border-radius: 50px 0;
+  object-fit: cover;
+
+  @include mq(tablet) {
+    width: 141px;
+    height: 178px;
+  }
+
+  @include mq(desktop) {
+    width: 267px;
+    height: 337px;
+  }
+}
+
+.gallery__wrap {
+  font-size: 14px;
+  line-height: 1.21;
+  text-align: center;
+
+  @include mq(tablet) {
+    font-size: 16px;
+    line-height: 1.25;
+  }
+}
+.gallery__title {
+  margin-bottom: 4px;
+  font-weight: 700;
+  color: #dc56c5;
+
+  @include mq(tablet) {
+    margin-bottom: 8px;
+  }
+}
+.gallery__txt {
+  margin-bottom: 4px;
+  font-weight: 400;
+  color: #ffffff;
+  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include mq(tablet) {
+    margin-bottom: 8px;
+  }
+}
+
+.gallery__link {
+  font-weight: 600;
+  font-size: 12px;
+  line-height: 1.25;
+  text-align: center;
+  color: #ffffff;
+  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include mq(tablet) {
+    font-size: 14px;
+    line-height: 1.21;
+  }
+}
+
+.gallery__icon {
+  margin-right: 3px;
+  fill: #ffffff;
+  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+}
+
+.js-target {
+  cursor: pointer;
+}
+.gallery__link--text{
+  position: relative;
+}
+.gallery__link--text::before{
+  content: '';
+  background: url("../images/vector.svg");
+
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 10px;
+  width: 10px;
+  top: 2px;
+  left: -12px;
+
+  @include mq(tablet) {
+    height: 12px;
+    width: 12px;
+    top:3px;
+    left:-15px;
+  }
+
+  @include mq(desktop) {
+    height: 15px;
+    width: 15px;
+    left:-20px;
+  }
+}

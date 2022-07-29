@@ -1,0 +1,21 @@
+.act {
+  color: #DC56C5;
+  border: 1px solid #DC56C5;
+  padding: 5px 10px;
+  border-radius: 10px 0px;
+}
+
+.paginal {
+  display: block;
+  width: 180px;
+  margin: 60px auto;
+  color: #fff;
+  display: flex;
+  align-items: baseline;
+  gap: 20px;
+  cursor: pointer;
+}
+
+.lightTheme {
+  color: black;
+}

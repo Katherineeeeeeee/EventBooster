@@ -1,0 +1,439 @@
+.header {
+  height: 364px;
+  position: relative;
+  padding-top: 80px;
+  padding-bottom: 112px;
+  margin: 0 auto;
+  background-image: linear-gradient(
+      180deg,
+      rgba(13, 13, 13, 0) 0%,
+      rgba(14, 14, 14, 0.8) 100%
+    ),
+    url(../images/header/overlay-mobile@1x.png),
+    url(../images/header/bg-mobile@x1.jpg);
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+
+  @include mq(retina) {
+    background: linear-gradient(
+        180deg,
+        rgba(13, 13, 13, 0) 0%,
+        rgba(14, 14, 14, 0.8) 100%
+      ),
+      url(../images/header/overlay-mobile@2x.png),
+      url(../images/header/bg-mobile@x2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @include mq(tablet) {
+    max-height: 364px;
+    padding-top: 40px;
+    padding-bottom: 170px;
+    background-image: linear-gradient(
+        180deg,
+        rgba(13, 13, 13, 0) 0%,
+        rgba(14, 14, 14, 0.8) 100%
+      ),
+      url(../images/header/tablet-overlay@1x.png),
+      url(../images/header/bg-tablet@x1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @include mq(retina) {
+    background-image: linear-gradient(
+        180deg,
+        rgba(13, 13, 13, 0) 0%,
+        rgba(14, 14, 14, 0.8) 100%
+      ),
+      url(../images/header/tablet-overlay@1x.png),
+      url(../images/header/bg-tablet@x2.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }
+
+  @include mq(desktop) {
+    max-width: 1680;
+    max-height: 446px;
+    background-image: linear-gradient(
+        180deg,
+        rgba(13, 13, 13, 0.19) 0%,
+        rgba(14, 14, 14, 0.8) 100%
+      ),
+      url(../images/header/desktop-overlay@1x.png),
+      url(../images/header/bg-desktop@x1.jpg);
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+
+    @include mq(retina) {
+      height: 446px;
+      background-image: linear-gradient(
+          180deg,
+          rgba(13, 13, 13, 0.19) 0%,
+          rgba(14, 14, 14, 0.8) 100%
+        ),
+        url(../images/header/desktop-overlay@1x.png),
+        url(../images/header/bg-desktop@x2.jpg);
+      background-size: cover;
+      background-position: center;
+      background-repeat: no-repeat;
+    }
+  }
+}
+label{
+  display: block;
+}
+.logo-bg {
+  position: absolute;
+  left: 0%;
+  top: 0%;
+  width: 110px;
+  height: 90px;
+  background: linear-gradient(
+    136deg,
+    rgba(196, 196, 196, 0.3) 10.75%,
+    rgba(196, 196, 196, 0) 92.33%
+  );
+  backdrop-filter: blur(30px);
+  border-bottom-right-radius: 100%;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.25);
+  @include mq(tablet) {
+    width: 170px;
+    height: 150px;
+  }
+
+  @include mq(desktop) {
+    width: 230px;
+    height: 190px;
+  }
+}
+
+.logo {
+  position: absolute;
+  left: 13%;
+  top: 15%;
+  fill: #fff;
+
+  @include mq(tablet) {
+    width: 150px;
+    height: 45px;
+    left: 0%;
+    top: 10%;
+  }
+
+  @include mq(desktop) {
+    width: 136px;
+    height: 70px;
+    left: 7%;
+    top: 15%;
+  }
+}
+
+.header__title {
+  width: 220px;
+  color: $main-color;
+  font-family: 'Montserrat';
+  font-weight: 900;
+  font-size: 18px;
+  line-height: 22px;
+  text-align: center;
+  margin: 0 auto;
+  margin-bottom: 24px;
+  line-height: 1.2;
+
+  @include mq(tablet) {
+    font-size: 30px;
+    width: 360px;
+    margin-bottom: 40px;
+  }
+
+  @include mq(desktop) {
+    width: 595px;
+    font-size: 50px;
+  }
+}
+
+.input {
+  width: 100%;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  border-radius: 20px;
+  border: none;
+  height: 40px;
+  padding: 16px 32px;
+  color: #939393;
+
+
+  @include mq(mobile) {
+    width: 336px;
+  }
+}
+.search__container{
+  margin: 0 auto;
+  position: relative;
+  width: 280px;
+  margin-bottom: 24px;
+  @include mq(tablet) {
+    width: 336px;
+    margin-bottom: 0;
+  }
+  @include mq(desktop) {
+    margin: 0 32px 0 0;
+    width: 288px;
+  }
+}
+
+
+.search-input {
+  max-width: 280px;
+  font-size: 16px;
+  box-shadow: none;
+  transition-property:box-shadow;
+  @extend %transition;
+
+  @include mq(tablet) {
+    max-width: 336px;
+    margin-right: 32px;
+  }
+  @include mq(desktop) {
+    width: 288px;
+    font-size: 16px;
+  }
+}
+.search-input:hover ~ .search-input__button  > .search-input__icon,
+.search-input:focus ~ .search-input__button  > .search-input__icon {
+
+  fill: #DC56C5;
+  width: 20px;
+  height: 20px;
+}
+.search-input:hover ,.search-input:focus{
+  box-shadow: 0 0 20px #DC56C5;
+
+}
+.search-input__button {
+  position: absolute;
+  top: 10px;
+  right: 32px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  @include mq(desktop) {
+    right: 30px;
+  }
+}
+
+
+.search-input__icon {
+  fill: #939393;
+  transition-property:fill,width,height;
+  @extend %transition;
+
+}
+.search-input__icon:hover{
+  fill: #DC56C5;
+  width: 20px;
+  height: 20px;
+}
+
+.search-input::placeholder {
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  color: #939393;
+}
+
+.input-container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+
+
+  @include mq(tablet) {
+    flex-direction: row;
+  }
+  @include mq(desktop) {
+    margin:0 auto;
+    display:inline-flex;
+  }
+}
+
+// Стили селектора страны
+.select-container{
+  max-width: 280px;
+  margin: 0 auto;
+  @include mq(tablet) {
+
+    width: 366px;
+  }
+
+  @include mq(desktop) {
+    width: 288px;
+    margin:0;
+  }
+}
+.select-box{
+  width: 280px;
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  color: #CCCCCC;
+ 
+  @include mq(tablet) {
+    font-size: 16px;
+    width: 336px;
+  }
+
+  @include mq(desktop) {
+    width: 288px;
+    font-size: 16px;
+  }
+}
+
+.select-box .options-container{
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  color: #CCCCCC;
+  max-height: 0;
+  width: 280px;
+  opacity: 0;
+  transition: all 0.4s;
+  border-radius: 8px;
+  overflow: hidden;
+
+  order: 1;
+  @include mq(tablet) {
+    width: 336px;
+  }
+  @include mq(desktop) {
+    width: 288px;
+  }
+}
+
+.selected{
+  width: 280px;
+  background: rgba(255, 255, 255, 0.2);
+  backdrop-filter: blur(20px);
+  height:40px;
+  border-radius: 20px;
+  border: none;
+  color: rgba(147, 147, 147, 1);
+  font-weight: 400;
+  font-size: 16px;
+  line-height: 1.2;
+  position: relative;
+  padding:10px 32px;
+  order: 0;
+  box-shadow: none;
+  transition-property:box-shadow;
+  @extend %transition;
+  @include mq(tablet) {
+    font-size: 16px;
+    width: 336px;
+    padding:10px;
+  }
+
+  @include mq(desktop) {
+    width: 288px;
+    font-size: 16px;
+  }
+}
+
+.selected::after{
+  content: '';
+  background: url("../images/header/selector.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+
+  position: absolute;
+  height: 100%;
+  width: 15px;
+  right: 30px;
+  top: 15px;
+  transition: all 0.4s;
+  transition-property:width;
+  @extend %transition;
+}
+
+.selected:hover,.selected:focus{
+  box-shadow: 0 0 20px #DC56C5;
+}
+ .selected:hover::after{
+  background: url("../images/select-pink.svg");
+  background-size: contain;
+  background-repeat: no-repeat;
+  width: 20px;
+
+}
+
+.select-box .options-container.active {
+  max-height: 70px;
+  opacity: 1;
+  overflow-y: scroll;
+  margin-top: 8px;
+  @include mq(tablet) {
+    font-size: 16px;
+
+    max-height: 100px;
+  }
+
+  @include mq(desktop) {
+
+    font-size: 16px;
+    max-height: 100px;
+  }
+
+}
+
+.select-box .options-container.active  + .selected::after{
+transform: rotateX(180deg);
+top:-15px;
+
+}
+
+.select-box .options-container::-webkit-scrollbar{
+  width: 8px;
+  background-color: #939393;
+  border-radius: 0 8px 8px 0;
+  @include mq(desktop) {
+    width: 8px;
+    background-color: #939393;
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+.select-box .options-container::-webkit-scrollbar-thumb{
+  background-color: #939393;
+  @include mq(desktop) {
+    width: 8px;
+    background-color: #939393;
+    border-radius: 0 8px 8px 0;
+  }
+}
+
+
+.select-box .option,
+.selected {
+padding-left:30px;
+cursor: pointer;
+}
+
+.select-box .option:hover{
+  background-color: #DC56C5;
+}
+
+.select-box label{
+  cursor: pointer;
+}
+
+.select-box .option .radio{
+  display: none;
+
+}

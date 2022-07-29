@@ -1,0 +1,67 @@
+html {
+  box-sizing: border-box;
+  scroll-behavior: smooth;
+}
+
+*,
+*::after,
+*::before {
+  box-sizing: inherit;
+}
+
+img {
+  // display: block;
+  // max-width: 100%;
+  height: auto;
+}
+
+body {
+  font-family: 'Montserrat', sans-serif;
+  background-color: #0d0d0d;
+  background-image: url('../images/cards/bcg-body.png');
+  background-repeat: repeat;
+
+  transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+  @include mq(tablet) {
+    background-image: url('../images/cards/ellipse-6-tablet.png'),
+      url('../images/cards/ellipse-5-tablet.png'),
+      url('../images/cards/ellipse-5-tablet.png'),
+      url('../images/cards/ellipse-9-tablet.png'),
+      url('../images/cards/ellipse-5-tablet.png'),
+      url('../images/cards/ellipse-7-tablet.png'),
+      url('../images/cards/bcg-body.png');
+
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+      no-repeat, repeat;
+    background-size: 275px, 126px, 126px, 80px, 80px, 275px, 100%;
+    background-position: left 20 bottom -10, left 20 bottom 1400,
+      right 10 bottom 50, right 33 bottom 73, left 44 bottom 1423,
+      right 20 bottom 950, 100%;
+  }
+
+  @include mq(desktop) {
+    background-image: url('../images/cards/decor.png'),
+      url('../images/cards/ellipse-6-desktop.png'),
+      url('../images/cards/ellipse-9-desktop.png'),
+      url('../images/cards/ellipse-9-desktop.png'),
+      url('../images/cards/ellipse-9-tablet.png'),
+      url('../images/cards/half-ellipse.png'),
+      url('../images/cards/ellipse-9-tablet.png'),
+      url('../images/cards/ellipse-5-tablet.png'),
+      url('../images/cards/ellipse-5-tablet.png'),
+      url('../images/cards/ellipse-5-tablet.png'),
+      url('../images/cards/decor.png'), url('../images/cards/bcg-body.png');
+
+    background-repeat: no-repeat, no-repeat, no-repeat, no-repeat, no-repeat,
+      no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, no-repeat, repeat;
+
+    background-size: 100%, 315px, 339px, 350px, 130px, 136px, 136px, 216px,
+      216px, 216px, 100%, 100%;
+
+    background-position: right 115 top 0, left 45 bottom 913,
+      right 31 bottom 286, right 31 bottom 1665, right 54 bottom 1060,
+      left 47 bottom 65, left 48 bottom 1600, right 11 bottom 1020,
+      left 6 bottom -40, left 8 bottom 1558, left 115 top 0, 100%;
+  }
+}
