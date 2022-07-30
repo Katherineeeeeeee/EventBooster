@@ -11,7 +11,6 @@ function paginal(totalObjects, numberImgPerPage, currentPage) {
     list.innerHTML = '';
     return;
   }
-  console.log(currentPage);
   let btnsArr = [];
   currentPageForCheck = currentPage + 1;
 
@@ -26,9 +25,7 @@ function paginal(totalObjects, numberImgPerPage, currentPage) {
   let len = btnsArr.length;
 
   if (sum === 2) {
-    list.innerHTML =
-      btnsArr[0] +
-      btnsArr[1];
+    list.innerHTML = btnsArr[0] + btnsArr[1];
   } else if (currentPage > 2) {
     if (currentPage >= len - 3) {
       list.innerHTML =

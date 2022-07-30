@@ -5,3 +5,4 @@ import theme from './js/theme';
 import modalCard from './js/modal-cards';
 import countrySelector from './js/country-selector';
 import scroll from './js/scroll';
+import preloader from './js/preloader';

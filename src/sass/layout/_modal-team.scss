@@ -1,0 +1,140 @@
+.modal-team-overflow {
+  position: fixed;
+  overflow-y: auto;
+  overflow-x: visually-hidden;
+  width: 100%;
+  height: 100%;
+  background: rgba(32, 13, 29, 0.6);
+  top: 0;
+  left: 0;
+  font-weight: 700;
+  transition: all 0.8s ease 0s;
+  @include mq(tablet) {
+    display: flex;
+    justify-content: center;
+    font-weight: 700;
+  }
+}
+
+.modal-team {
+  overflow-y: auto;
+  overflow-x: visually-hidden;
+  display: block;
+  align-items: center;
+  justify-content: center;
+  padding: 30px 10px;
+  background-color: #fff;
+  line-height: 1.25;
+  border-radius: 150px 0px;
+  transition: all 0.8s ease 0s;
+  @include mq(tablet) {
+    position: absolute;
+    width: 704px;
+    height: 600px;
+    border-radius: 300px 0px;
+    padding: 30px 40px 30px 5px;
+    left: 5%;
+    top: 5%;
+  }
+
+  @include mq(desktop) {
+    font-size: 18px;
+    line-height: 1.2;
+    position: absolute;
+    width: 1034px;
+    height: 700px;
+    left: 25%;
+    top: 25%;
+  }
+}
+
+.modal-team-logo__wrapper {
+  margin-bottom: 20px;
+  @include mq(tablet) {
+    padding-bottom: 40px;
+  }
+}
+.modal-team-logo__title,
+.modal-team-logo__title-team {
+  text-align: center;
+  width: auto;
+  color: $main-color;
+}
+.modal-team-logo__link {
+  display: block;
+}
+
+.modal-team-logo__img {
+  height: 35px;
+  width: 100px;
+  margin-left: 50px;
+  @include mq(tablet) {
+    margin-left: 180px;
+  }
+}
+
+.team {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-between;
+}
+
+.team__item {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 15px;
+  width: calc((100% - 20px * 1) / 1);
+  @include mq(tablet) {
+    margin: 0 5px 32px 5px;
+    width: calc((100% - 20px * 2) / 3);
+  }
+}
+
+.team__item:last-child {
+  margin-bottom: 0;
+}
+
+.team__link {
+  display: block;
+  width: 100px;
+  height: 100px;
+  margin-bottom: 5px;
+}
+.team__img {
+  margin-bottom: 5px;
+  border-radius: 100%;
+  width: 100%;
+}
+.team__img:hover {
+  transform: scale(1.1);
+}
+
+.team__name {
+  text-align: center;
+  margin-bottom: 5px;
+}
+.team__role {
+  text-align: center;
+  color: $main-color;
+}
+
+.button-close {
+  position: absolute;
+  background: none;
+  outline: none;
+  border: none;
+  top: 10px;
+  right: 10px;
+  width: 30px;
+  height: 30px;
+  display: block;
+  padding: 8px;
+  border-radius: 50%;
+}
+.button-close:focus {
+  filter: drop-shadow(0 0 5px $main-color);
+}
+.button-close:hover {
+  background-color: #4c00fe;
+}

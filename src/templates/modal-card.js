@@ -2,6 +2,8 @@
 import sprite from '../images/sprite.svg';
 
 export function ticketModal(el) {
+  let info = el.info;
+
   if (!el.priceRanges) {
     el.priceRanges = [{}];
     el.priceRanges[0].min = '';
@@ -9,8 +11,12 @@ export function ticketModal(el) {
     el.priceRanges[0].currency = '';
   }
 
-  if (!el._embedded.events) {
-    el._embedded.events = { info: 'No information' };
+  if (!el.info) {
+    info = 'No information';
+  }
+
+  if (info.length > 60) {
+    info = el.info.slice(0, 60) + '...';
   }
 
   return `<div class="modal">
@@ -28,7 +34,7 @@ export function ticketModal(el) {
       <li class="modal__item">
         <h2 class="modal__title">Info</h2>
         <p class="modal__text">
-        ${el._embedded.events.info}
+        ${info}
         </p>
       </li>
       <li class="modal__item">
@@ -38,8 +44,8 @@ export function ticketModal(el) {
       </li>
       <li class="modal__item">
         <h2 class="modal__title">Where</h2>
-        <p class="modal__text">${el._embedded.venues[0].city.name}</p>
-        <p class="modal__text">${el._embedded.venues[0].country.name}</p>
+        <p class="modal__text">${el._embedded.venues[0].city.name}, ${el._embedded.venues[0].country.name}</p>
+        <p class="modal__text">${el._embedded.venues[0].name}</p>
       </li>
       <li class="modal__item">
         <h2 class="modal__title">Who</h2>

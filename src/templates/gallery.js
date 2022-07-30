@@ -6,7 +6,7 @@ export function ticketMarkup(el) {
     nameArtist = el.name.slice(0, 20) + '...';
   }
 
-  return `<li data-id="${el.id}" class= "gallery__item">
+  return `<li class= "gallery__item">
 
   <div class="js-target" data-id="${el.id}">
     <img

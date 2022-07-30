@@ -1,63 +1,72 @@
-// 'use strict';
+'use strict';
 
-// import { ticketModal } from '../templates/modal-card';
-// import { TicketmasterAPI } from './ticketmaster-api';
+import { ticketModal } from '../templates/modal-card';
+import { ticketmasterAPI, renderBaseMarkup } from './render-base-markup';
 
-// const ticketmasterAPI = new TicketmasterAPI();
+const modalEl = document.querySelector('.for-modal-js');
+const galleryEl = document.querySelector('.gallery');
 
-// const modalEl = document.querySelector('.for-modal-js');
-// const galleryEl = document.querySelector('.gallery');
+galleryEl.addEventListener('click', renderModalCard);
 
-// renderModalCard();
+async function renderModalCard(e) {
+  try {
+    if (
+      !e.target.parentElement.dataset.id &&
+      !e.target.parentElement.parentElement.dataset.id
+    ) {
+      return;
+    }
 
-// async function renderModalCard(e) {
-//   try {
-//     const response = await ticketmasterAPI.fetchTickets();
+    const response = await ticketmasterAPI.fetchEventById(
+      e.target.parentElement.dataset.id ||
+        e.target.parentElement.parentElement.dataset.id
+    );
+    console.log(response);
 
-//     let inputs = galleryEl.getElementsByTagName('li');
+    modalEl.innerHTML = ticketModal(response);
 
-//     for (let i = 0; i < inputs.length; i += 1) {
-//       inputs[i].addEventListener('click', onTargetElementClick);
-//     }
+    document.body.classList.add('no-scroll');
 
-//     function onTargetElementClick() {
-//       let modalCardMarkup = null;
-//       response._embedded.events.forEach(el => {
-//         if (this.dataset.id === el.id) {
-//           return (modalCardMarkup = ticketModal(el));
-//         }
-//       });
-//       modalEl.innerHTML = modalCardMarkup;
-//       document.body.classList.add('no-scroll');
+    const closeModalBtn = document.querySelector('.modal__close-btn');
+    const backdropEl = document.querySelector('.modal');
+    const modalBtnMoreEvents = document.querySelector('.js-modal-btn-more');
 
-//       const closeModalBtn = document.querySelector('.modal__close-btn');
-//       const backdropEl = document.querySelector('.modal');
+    window.addEventListener('keydown', onEscBtnPush);
+    backdropEl.addEventListener('click', onBackdropElClick);
+    closeModalBtn.addEventListener('click', closeModalWindow);
+    modalBtnMoreEvents.addEventListener('click', moreEventsModalBtn);
 
-//       window.addEventListener('keydown', onEscBtnPush);
-//       backdropEl.addEventListener('click', onBackdropElClick);
-//       closeModalBtn.addEventListener('click', closeModalWindow);
+    //Search more events by button 'more from the author' - modal window
 
-//       function onBackdropElClick(e) {
-//         if (e.target !== e.currentTarget) {
-//           return;
-//         }
-//         closeModalWindow();
-//       }
+    function moreEventsModalBtn() {
+      closeModalWindow();
+      ticketmasterAPI.searchQuery = this.dataset.name;
+      ticketmasterAPI.page = 0;
+      renderBaseMarkup();
+      ticketmasterAPI.searchQuery = '';
+      return;
+    }
 
-//       function onEscBtnPush(e) {
-//         if (e.code !== 'Escape') {
-//           return;
-//         }
-//         closeModalWindow();
-//       }
+    function onBackdropElClick(e) {
+      if (e.target !== e.currentTarget) {
+        return;
+      }
+      closeModalWindow();
+    }
 
-//       function closeModalWindow() {
-//         modalEl.innerHTML = '';
-//         document.body.classList.remove('no-scroll');
-//         window.removeEventListener('keydown', onEscBtnPush);
-//       }
-//     }
-//   } catch (err) {
-//     console.log(err);
-//   }
-// }
+    function onEscBtnPush(e) {
+      if (e.code !== 'Escape') {
+        return;
+      }
+      closeModalWindow();
+    }
+
+    function closeModalWindow() {
+      modalEl.innerHTML = '';
+      document.body.classList.remove('no-scroll');
+      window.removeEventListener('keydown', onEscBtnPush);
+    }
+  } catch (err) {
+    console.log(err);
+  }
+}
