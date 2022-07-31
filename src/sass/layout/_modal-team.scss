@@ -10,7 +10,8 @@
   background: rgba(32, 13, 29, 0.6);
   top: 0;
   left: 0;
-  z-index: 5; 
+  z-index: 5;
+
   opacity: 0;
   visibility: hidden;
   transition: all 1.8s ease;
@@ -29,30 +30,28 @@
 .modal-team {
   overflow-y: auto;
   overflow-x: visually-hidden;
-  // display: block;
-  // align-items: center;
-  // justify-content: center;
   width: 300px;
   height: 1200px;
   padding: 30px 10px;
-  // position: absolute;
+  position: absolute;
+  top: 10px;
+
   background-color: #fff;
   line-height: 1.25;
   border-radius: 150px 0px;
   opacity: 0;
-  // visibility: hidden;
   transform: perspective(600px) translate(0px, 0) rotate(45deg);
-  
+
   transition: all 1.8s ease;
-  // left: 50%;
-  // top: 50px;
   transform: translate(-50%);
   font-weight: 700;
   @include mq(tablet) {
+    top: 100px;
     width: 704px;
     height: 600px;
     border-radius: 300px 0px;
-    padding: 30px 40px 30px 5px; 
+    padding: 30px 40px 30px 5px;
+
   }
 
   @include mq(desktop) {
@@ -143,12 +142,15 @@
   outline: none;
   border: none;
   top: 10px;
-  right: 10px;
-  width: 30px;
-  height: 30px;
-  display: block;
+  right: 20px;
+  width: 35px;
+  height: 35px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   padding: 8px;
   border-radius: 50%;
+  cursor: pointer;
 }
 .button-close:focus {
   filter: drop-shadow(0 0 5px $main-color);
