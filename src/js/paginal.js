@@ -34,7 +34,14 @@ function paginal(totalObjects, numberImgPerPage, currentPage) {
         '...' +
         btnsArr[currentPage - 1] +
         btnsArr.slice(currentPage, currentPage + 3).join('');
-    } else if (currentPage > 1) {
+    } else if (currentPage > 0 && currentPage < 2) {
+      list.innerHTML =
+        btnsArr[currentPage - 1] +
+        btnsArr.slice(currentPage, currentPage + 3).join('') +
+        '...' +
+        btnsArr[len - 1];
+    } else if (currentPage >= 2) {
+
       list.innerHTML =
         btnsArr[0] +
         '...' +
@@ -66,7 +73,10 @@ function paginClick(e) {
     return;
   }
   ticketmasterAPI.page = e.target.textContent - 1;
-  window.scrollTo(0, 0);
+
+  setTimeout(() => {
+    window.scrollTo(0, 0);
+  }, 1000);
   renderBaseMarkup();
 }
 

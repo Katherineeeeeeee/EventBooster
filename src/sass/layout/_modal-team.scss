@@ -1,5 +1,8 @@
 .modal-team-overflow {
   position: fixed;
+  display: flex;
+  justify-content: center;
+  align-items: center;
   overflow-y: auto;
   overflow-x: visually-hidden;
   width: 100%;
@@ -7,46 +10,59 @@
   background: rgba(32, 13, 29, 0.6);
   top: 0;
   left: 0;
-  font-weight: 700;
-  transition: all 0.8s ease 0s;
-  @include mq(tablet) {
-    display: flex;
-    justify-content: center;
-    font-weight: 700;
-  }
+  z-index: 5; 
+  opacity: 0;
+  visibility: hidden;
+  transition: all 1.8s ease;
+}
+
+.modal-team-overflow.opened {
+  opacity: 1;
+  visibility: visible;
+}
+
+.modal-team-overflow.opened .modal-team {
+  opacity: 1;
+  transform: perspective(600px) translate(0px, 0%) rotate(0deg);
 }
 
 .modal-team {
   overflow-y: auto;
   overflow-x: visually-hidden;
-  display: block;
-  align-items: center;
-  justify-content: center;
+  // display: block;
+  // align-items: center;
+  // justify-content: center;
+  width: 300px;
+  height: 1200px;
   padding: 30px 10px;
+  // position: absolute;
   background-color: #fff;
   line-height: 1.25;
   border-radius: 150px 0px;
-  transition: all 0.8s ease 0s;
+  opacity: 0;
+  // visibility: hidden;
+  transform: perspective(600px) translate(0px, 0) rotate(45deg);
+  
+  transition: all 1.8s ease;
+  // left: 50%;
+  // top: 50px;
+  transform: translate(-50%);
+  font-weight: 700;
   @include mq(tablet) {
-    position: absolute;
     width: 704px;
     height: 600px;
     border-radius: 300px 0px;
-    padding: 30px 40px 30px 5px;
-    left: 5%;
-    top: 5%;
+    padding: 30px 40px 30px 5px; 
   }
 
   @include mq(desktop) {
     font-size: 18px;
-    line-height: 1.2;
-    position: absolute;
     width: 1034px;
     height: 700px;
-    left: 25%;
-    top: 25%;
   }
 }
+
+
 
 .modal-team-logo__wrapper {
   margin-bottom: 20px;
@@ -56,9 +72,11 @@
 }
 .modal-team-logo__title,
 .modal-team-logo__title-team {
-  text-align: center;
-  width: auto;
+  margin-left: 50px;
   color: $main-color;
+  @include mq(tablet) {
+    margin-left: 180px;
+  }
 }
 .modal-team-logo__link {
   display: block;

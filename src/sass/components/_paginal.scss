@@ -1,18 +1,51 @@
 .act {
-  color: #dc56c5;
-  border: 1px solid #dc56c5;
+  color: $main-color;
+  border: 1px solid $main-color;
+
   border-radius: 10px 0px;
+  animation: animate 1s linear;
+}
+@keyframes animate {
+  0% {
+    border: none;
+  }
+
+  30% {
+    border-bottom: 1px solid $main-color;
+  }
+  50% {
+    border-right: 1px solid $main-color;
+  }
+
+  70% {
+    border-top: 1px solid $main-color;
+  }
+
+  100% {
+    border: 1px solid $main-color;
+  }
 }
 
 .paginal {
-  display: block;
-  width: 180px;
   margin: 60px auto;
   color: #fff;
   display: flex;
   align-items: baseline;
-  gap: 20px;
+  justify-content: center;
   cursor: pointer;
+
+//Change mode LIGHT - DARK by operating system setting //
+  @media (prefers-color-scheme: light) {
+    color: black;
+  }
+}
+
+.paginal li {
+  padding: 5px 10px;
+
+  &:hover {
+    color: $main-color;
+  }
 }
 
 .paginal li {

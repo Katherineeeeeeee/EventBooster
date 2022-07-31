@@ -1,7 +1,103 @@
+//Change mode LIGHT - DARK by operating system setting
+// body {
+//   @media (prefers-color-scheme: light) {
+//     background-color: #fff3;
+//     transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+//     .gallery__txt,
+//     .gallery__link,
+//     .gallery__icon {
+//       color: #000000;
+//       transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+//     }
+
+//     .gallery__link--text::before {
+//       background: url("../images/vector-light.svg");
+
+//       background-size: contain;
+//       background-repeat: no-repeat;
+//     }
+
+//     .footer__link:hover .footer__text {
+//       padding-left: 5px;
+//       padding-right: 5px;
+//       box-shadow: 0 0 20px $main-color;
+//       border-radius: 10px;
+//       background-color: #000000;
+//     }
+
+//     .footer__link:focus .footer__text {
+//       padding-left: 5px;
+//       padding-right: 5px;
+//       box-shadow: 0 0 20px $main-color;
+//       border-radius: 10px;
+//       background-color: #000000;
+//     }
+
+//     .scroll {
+//       background-color: #000000;
+//       border-radius: 100%;
+//       width: 29px;
+//       height: 29px;
+//     }
+
+//     .header {
+//       background-image: url('../images/header/bg-wh.jpg');
+//       background-position: bottom;
+//       background-repeat: no-repeat;
+//       background-size: cover;
+//     }
+
+//     .gallery__item::after {
+//       border: 1px solid $white-theme-main;
+//     }
+
+//     .gallery__title {
+//       color: $white-theme-main;
+//     }
+
+//     .header__title {
+//       color: $white-theme-main;
+//     }
+
+//     .footer__text {
+//       color: $white-theme-main;
+
+//       &:hover,
+//       &:focus {
+//         color: white;
+//       }
+//     }
+
+//     .input {
+//       background: $white-theme-main;
+//       color: $main-color;
+//     }
+
+//     .search-input::placeholder {
+//       color: $main-color;
+//     }
+
+//     .search-input {
+//       color: $main-color;
+//     }
+
+//     .select-box .options-container {
+//       background: $white-theme-main;
+//     }
+
+//     .selected {
+//       background: $white-theme-main;
+//       color: $main-color;
+//     }
+//   }
+// }
+
+//Change theme LIGHT - DARK by toggle
 .light {
   background-color: #fff3;
-
   transition: background-color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
 }
 
 body.light .gallery__txt,
@@ -10,31 +106,78 @@ body.light .gallery__icon{
   color: #000000;
   transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
+
 body.light .gallery__link--text::before{
   background: url("../images/vector-light.svg");
-  
+
   background-size: contain;
   background-repeat: no-repeat;
 }
+
 body.light .footer__link:hover .footer__text{
   padding-left: 5px;
   padding-right: 5px;
-  box-shadow: 0 0 20px #DC56C5;
+  box-shadow: 0 0 20px $main-color;
   border-radius: 10px;
   background-color: #000000;
 }
+
 body.light .footer__link:focus .footer__text{
   padding-left: 5px;
   padding-right: 5px;
-  box-shadow: 0 0 20px #DC56C5;
+  box-shadow: 0 0 20px $main-color;
   border-radius: 10px;
   background-color: #000000;
 }
+
 body.light .scroll{
   background-color: #000000;
   border-radius: 100%;
   width: 29px;
   height: 29px;
+}
+
+body.light .header {
+  background-image: url('../images/header/bg-wh.jpg');
+  background-position: bottom;
+  background-repeat: no-repeat;
+  background-size: cover;
+}
+
+body.light .gallery__item::after {
+  border: 1px solid $white-theme-main;
+}
+body.light .gallery__title{
+  color:$white-theme-main;
+}
+body.light .header__title{
+  color: $white-theme-main;
+}
+
+body.light .footer__text{
+  color: $white-theme-main;
+ &:hover,&:focus{
+  color: white;
+ }
+}
+
+body.light .input{
+  background: $white-theme-main;
+  color: $main-color;
+}
+body.light .search-input::placeholder{
+  color: $main-color;
+}
+body.light .search-input{
+  color: $main-color;
+}
+body.light .select-box .options-container{
+  background: $white-theme-main;
+}
+
+body.light .selected{
+  background: $white-theme-main;
+  color: $main-color;
 }
 
 
@@ -57,6 +200,7 @@ body.light .scroll{
   width: 20px;
   border-radius: 50%;
   transition: all 0.3s ease-in-out;
+
   @include mq(tablet) {
     height: 35px;
     width: 35px;
@@ -85,6 +229,7 @@ body.light .scroll{
   width: 20px;
   top: 60px;
   right: 70px;
+
   @include mq(tablet) {
     height: 35px;
     width: 35px;

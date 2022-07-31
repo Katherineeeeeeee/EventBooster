@@ -176,7 +176,8 @@ a {
   transition-property:box-shadow,border-radius,transform;
   @extend %transition;
   &:hover{
-    
+
+
     box-shadow: 0 0 20px $main-color;
     border-radius: 8px;
   }

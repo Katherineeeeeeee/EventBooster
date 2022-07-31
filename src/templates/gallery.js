@@ -6,10 +6,20 @@ export function ticketMarkup(el) {
     nameArtist = el.name.slice(0, 20) + '...';
   }
 
+  if (!el._embedded) {
+    el._embedded = {};
+    el._embedded.venues = [{}];
+    el._embedded.venues[0].name = haventPlace;
+  }
 
   if (!el._embedded.venues[0].name) {
     el._embedded.venues[0].name = haventPlace;
-    console.log(el._embedded);
+  }
+
+  if (!el._embedded.venues[0].location) {
+    el._embedded.venues[0].location = [{}];
+    el._embedded.venues[0].location.latitude = '';
+    el._embedded.venues[0].location.longitude = '';
   }
 
 
