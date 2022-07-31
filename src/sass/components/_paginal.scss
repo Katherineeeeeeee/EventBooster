@@ -1,7 +1,6 @@
 .act {
-  color: #DC56C5;
-  border: 1px solid #DC56C5;
-  padding: 5px 10px;
+  color: #dc56c5;
+  border: 1px solid #dc56c5;
   border-radius: 10px 0px;
 }
 
@@ -14,6 +13,14 @@
   align-items: baseline;
   gap: 20px;
   cursor: pointer;
+}
+
+.paginal li {
+  padding: 5px 10px;
+
+  &:hover {
+    color: $main-color;
+  }
 }
 
 .lightTheme {

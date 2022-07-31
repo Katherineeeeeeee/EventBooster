@@ -1,3 +1,38 @@
+.scale-up-ver-top {
+  -webkit-animation: scale-up-ver-top 0.2s cubic-bezier(0.39, 0.575, 0.565, 1)
+    both;
+  animation: scale-up-ver-top 0.2s cubic-bezier(0.39, 0.575, 0.565, 1) both;
+}
+
+@-webkit-keyframes scale-up-ver-top {
+  0% {
+    -webkit-transform: scaleY(0.2);
+    transform: scaleY(0.2);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+}
+@keyframes scale-up-ver-top {
+  0% {
+    -webkit-transform: scaleY(0.2);
+    transform: scaleY(0.2);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+  100% {
+    -webkit-transform: scaleY(1);
+    transform: scaleY(1);
+    -webkit-transform-origin: 100% 0%;
+    transform-origin: 100% 0%;
+  }
+}
+
 .modal.is-hidden {
   opacity: 0;
   visibility: hidden;
@@ -83,7 +118,7 @@
 .modal__close-icon {
   &:hover,
   :focus {
-    fill: rgba(76, 0, 254, 1);
+    fill: #dc56c5;
   }
 
   @include mq(desktop) {

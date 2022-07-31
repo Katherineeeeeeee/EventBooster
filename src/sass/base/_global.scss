@@ -16,6 +16,8 @@ img {
 }
 
 body {
+
+
   font-family: 'Montserrat', sans-serif;
   background-color: #0d0d0d;
   background-image: url('../images/cards/bcg-body.png');
@@ -64,4 +66,22 @@ body {
       left 47 bottom 65, left 48 bottom 1600, right 11 bottom 1020,
       left 6 bottom -40, left 8 bottom 1558, left 115 top 0, 100%;
   }
+}
+
+//Scroll-bar
+::-webkit-scrollbar {
+  width: 5px;
+
+  @include mq(tablet) {
+    width: 7px;
+  }
+
+  @include mq(desktop) {
+    width: 10px;
+  }
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: #dc56c5;
+  border-radius: 100px;
 }

@@ -23,7 +23,7 @@
 .footer__link:focus .footer__text{
     padding-left: 5px;
     padding-right: 5px;
-    box-shadow: 0 0 20px #DC56C5;
+    box-shadow: 0 0 20px $main-color;
     border-radius: 10px;
 }
 
@@ -45,7 +45,7 @@
 }
 
 .scroll__icon{
-    fill: #dc56c5;
+    fill: $main-color;
 }
 
 .scroll{

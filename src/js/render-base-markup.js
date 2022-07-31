@@ -29,6 +29,8 @@ async function onSerchQuerySubmit(e) {
   countryBefore = ticketmasterAPI.searchCountry;
   ticketmasterAPI.searchQuery = e.currentTarget.elements.serchQuery.value;
 
+  ticketmasterAPI.page = 0;
+
   renderBaseMarkup();
 }
 

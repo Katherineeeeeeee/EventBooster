@@ -28,6 +28,8 @@ a {
   z-index: 1;
   width: 130px;
   margin: 10px;
+  transition-property:transform;
+  @extend %transition;
 
   @include mq(tablet) {
     flex-basis: calc((100% - 32px * 4) / 4);
@@ -37,7 +39,14 @@ a {
   @include mq(desktop) {
     flex-basis: calc((100% - 32px * 4) / 4);
   }
+
+  &:hover,&:focus{
+    transform: scale(1.1);
+
+  }
 }
+
+
 
 .gallery__item::after {
   content: '';
@@ -99,26 +108,41 @@ a {
   }
 }
 .gallery__title {
+  display: inline-block;
+  padding: 0 3px;
   margin-bottom: 4px;
   font-size: 14px;
   font-weight: 700;
-  color: #dc56c5;
+  color: $main-color;
+  transition-property:box-shadow,border-radius,transform;
+  @extend %transition;
 
   @include mq(tablet) {
     margin-bottom: 8px;
     font-size: 16px;
+
+  }
+  &:hover{
+    box-shadow: 0 0 20px $main-color;
+    border-radius: 8px;
+    transform: scale(1.1);
+
   }
 }
 .gallery__txt {
+  display: inline-block;
+  padding: 0 4px;
   margin-bottom: 4px;
   font-weight: 400;
   color: #ffffff;
-  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
+
 
   @include mq(tablet) {
     margin-bottom: 8px;
     font-size: 16px;
   }
+
 }
 
 .gallery__link {
@@ -127,25 +151,35 @@ a {
   line-height: 1.25;
   text-align: center;
   color: #ffffff;
-  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
+
 
   @include mq(tablet) {
     font-size: 14px;
     line-height: 1.21;
   }
+
 }
 
 .gallery__icon {
   margin-right: 3px;
   fill: #ffffff;
-  transition: color 500ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .js-target {
+  position: relative;
+  z-index: 1;
   cursor: pointer;
 }
 .gallery__link--text{
+  display: inline-block;
   position: relative;
+  transition-property:box-shadow,border-radius,transform;
+  @extend %transition;
+  &:hover{
+    
+    box-shadow: 0 0 20px $main-color;
+    border-radius: 8px;
+  }
 }
 .gallery__link--text::before{
   content: '';
@@ -172,4 +206,10 @@ a {
     width: 15px;
     left:-20px;
   }
+
 }
+.flip-scale-down-diag-2{animation:flip-scale-down-diag-2 1s linear both}
+
+
+@keyframes flip-scale-down-diag-2{0%{transform:scale(1) rotate3d(-1,1,0,0deg)}50%{transform:scale(.4) rotate3d(-1,1,0,0deg)}100%{transform:scale(1) rotate3d(-1,1,0,360deg)}}
+

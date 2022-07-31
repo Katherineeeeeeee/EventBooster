@@ -24,15 +24,17 @@ function paginal(totalObjects, numberImgPerPage, currentPage) {
 
   let len = btnsArr.length;
 
-  if (sum === 2) {
-    list.innerHTML = btnsArr[0] + btnsArr[1];
-  } else if (currentPage > 2) {
+  if (sum <= 5 && sum > 0) {
+    list.innerHTML = btnsArr.join('');
+  } else if (sum > 0) {
+
     if (currentPage >= len - 3) {
       list.innerHTML =
         btnsArr[0] +
+        '...' +
         btnsArr[currentPage - 1] +
         btnsArr.slice(currentPage, currentPage + 3).join('');
-    } else {
+    } else if (currentPage > 1) {
       list.innerHTML =
         btnsArr[0] +
         '...' +
@@ -40,13 +42,12 @@ function paginal(totalObjects, numberImgPerPage, currentPage) {
         btnsArr.slice(currentPage, currentPage + 3).join('') +
         '...' +
         btnsArr[len - 1];
+    } else {
+      list.innerHTML =
+        btnsArr.slice(currentPage, currentPage + 3).join('') +
+        '...' +
+        btnsArr[len - 1];
     }
-  } else if (currentPage > 0) {
-    list.innerHTML =
-      btnsArr[currentPage - 1] +
-      btnsArr.slice(currentPage, currentPage + 3).join('') +
-      '...' +
-      btnsArr[len - 1];
   } else {
     list.innerHTML =
       btnsArr.slice(currentPage, currentPage + 3).join('') +
