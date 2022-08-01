@@ -34,10 +34,10 @@
   justify-content: center;
   cursor: pointer;
 
-//Change mode LIGHT - DARK by operating system setting //
-  @media (prefers-color-scheme: light) {
-    color: black;
-  }
+  //Change mode LIGHT - DARK by operating system setting //
+  // @media (prefers-color-scheme: light) {
+  //   color: #000000;
+  // }
 }
 
 .paginal li {
@@ -57,5 +57,5 @@
 }
 
 .lightTheme {
-  color: black;
+  color: #000000;
 }
