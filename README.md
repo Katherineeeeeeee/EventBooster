@@ -55,26 +55,30 @@ Katherine Dudar (Team-Lead)
 
 Andrii Klochko (Scrum Master)
 
-pagination logic, switching pages
+ - pagination logic, switching pages
+
 Denys Dashkevych (Full Stack Dev)
 
-search string logic by event name
-the logic of loading and displaying events by name
-the logic of loading events when the page is first loaded
-the logic of closing the modal when clicking on the cross and beyond it
+ - search string logic by event name
+ - the logic of loading and displaying events by name
+ - the logic of loading events when the page is first loaded
+ - the logic of closing the modal when clicking on the cross and beyond it
+ - 
 Vyacheslav Ushakov (Full Stack Dev)
 
-Markup and footer styles
+ - Markup and footer styles
+
 Sergii Gulaga (Full Stack Dev)
 
-markup and modal styles of a specific event
-darkening and blurring of the background when the modal is open
-the logic of loading and displaying event data in open mode
-placement of event links in ticket purchase buttons
-the logic of loading and displaying events after clicking the "More from this author" button
-the logic of closing the modal when clicking on the cross and beyond it
-customize scroll
+ - markup and modal styles of a specific event
+ - darkening and blurring of the background when the modal is open
+ - the logic of loading and displaying event data in open mode
+ - placement of event links in ticket purchase buttons
+ - the logic of loading and displaying events after clicking the "More from this author" button
+ - the logic of closing the modal when clicking on the cross and beyond it
+ - customize scroll
+
 Maksym Perlovskyi (Full Stack Dev)
 
-Modal appearance animation for team
-Markup and modal styles for team
+ - Modal appearance animation for team
+ - Markup and modal styles for team
