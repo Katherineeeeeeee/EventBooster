@@ -44,7 +44,7 @@ Project implemented:
         dark/light theme toggle
 
 Development team:
-
+------
 [Katherine Dudar](https://github.com/Katherineeeeeeee) (Team-Lead)
 
  - background display (phone, tablet, desktop)
