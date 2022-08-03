@@ -44,13 +44,15 @@ Project implemented:
         dark/light theme toggle
 
 Development team:
+
 Katherine Dudar (Team-Lead)
 
-background display (phone, tablet, desktop)
-layout and styles of one event card
-loader
-smooth scroll to the top
-dark/light theme toggle
+ - background display (phone, tablet, desktop)
+ - layout and styles of one event card
+ - loader
+ - smooth scroll to the top
+ - dark/light theme toggle
+
 Andrii Klochko (Scrum Master)
 
 pagination logic, switching pages
