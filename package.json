@@ -2,10 +2,10 @@
   "name": "team-project",
   "version": "2.0.0",
   "description": "",
-  "homepage": "https://Katherineeeeeeee.github.io/team-project ",
+  "homepage": "https://Katherineeeeeeee.github.io/EventBooster",
   "scripts": {
     "start": "parcel src/*.html",
-    "build": "parcel build src/*.html --public-url /team-project/"
+    "build": "parcel build src/*.html --public-url /EventBooster/"
   },
   "repository": {
     "type": "git",
