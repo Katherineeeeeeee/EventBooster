@@ -26,21 +26,19 @@ Tasks List:
 23. The logic of closing the modal when clicking on the cross and beyond it
 
 Technologies used to implement the project:
+- vs code
+- git
+- parcel
+- HTML 5
+- SASS
+- CSS grid
+- JS
 
-vs code
-git
-parcel
-HTML 5
-SASS
-CSS grid
-JS
 Project implemented:
 
-all items according to: TASK LIST
-
-additionally:
-
-customize scroll
-loader
-smooth scroll to the top
-dark/light theme toggle
+- all items according to: TASK LIST
+- additionally:
+        customize scroll
+        loader
+        smooth scroll to the top
+        dark/light theme toggle
