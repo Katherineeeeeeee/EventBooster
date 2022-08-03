@@ -63,12 +63,12 @@ Denys Dashkevych (Full Stack Dev)
  - the logic of loading and displaying events by name
  - the logic of loading events when the page is first loaded
  - the logic of closing the modal when clicking on the cross and beyond it
- - 
+
 Vyacheslav Ushakov (Full Stack Dev)
 
  - Markup and footer styles
 
-Sergii Gulaga (Full Stack Dev)
+[Sergii Gulaga](https://github.com/Ry6ens) (Full Stack Dev)
 
  - markup and modal styles of a specific event
  - darkening and blurring of the background when the modal is open
