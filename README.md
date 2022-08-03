@@ -37,11 +37,7 @@ Technologies used to implement the project:
 Project implemented:
 
 - all items according to: TASK LIST
-- additionally:
-        - customize scroll
-        - loader
-        - smooth scroll to the top
-        - dark/light theme toggle
+- additionally: customize scroll, loader, smooth scroll to the top, dark/light theme toggle
 
 Development team:
 ------
