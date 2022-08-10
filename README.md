@@ -1,6 +1,6 @@
 # EventBooster
 
-Tasks List:
+[Tasks List](https://docs.google.com/spreadsheets/d/19zS365fIf0gNfE8-Q-ruMeYiI7GVlrtNLl45MvLXDPs/edit#gid=0):
 1. Background display (phone, tablet, desktop)
 2. Logo display (phone, tablet, desktop)
 3. Displaying the title (phone, tablet, desktop)
@@ -24,6 +24,7 @@ Tasks List:
 21. Placement of event links in ticket purchase buttons
 22. The logic of loading and displaying events after clicking the "More from this author" button
 23. The logic of closing the modal when clicking on the cross and beyond it
+----------
 
 Technologies used to implement the project:
 - vs code
